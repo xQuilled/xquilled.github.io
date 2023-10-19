@@ -6,19 +6,19 @@
 body {
   background-color: #111;
   background-image: url("sky.gif");
+  background-position: center;
+  background-position: 50% 50%;
   background-repeat: repeat;
-  font-family: 'Ubuntu Mono', monospace;;
+  font-family: 'Ubuntu Mono', monospace;
+  ;
   font-size: 16px;
   letter-spacing: 2px;
   color: #FFFFFF;
   text-shadow: 0 0 4px white;
   color: #ababab;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -28,15 +28,25 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: auto;
-  max-width: 80%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+
   background: rgba(50, 50, 50, 0.1);
   border: 2px solid;
   backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 64px #000000;
+  box-shadow: 0px 0px 16px #FFF;
   border-radius: 16px;
   border-color: #464646;
-  padding: 6rem 16rem;
+
+  animation-duration: 0.8s;
+  animation-name: animate-pop;
+  backdrop-filter: blur(4px);
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.18);
 }
 
 h1 {
@@ -50,22 +60,14 @@ p {
   margin: 8px;
 }
 
-.animate.pop {
-  animation-duration: 0.8s;
-  animation-name: animate-pop;
-  backdrop-filter: blur(4px);
-  animation-timing-function: cubic-bezier(.26, .53, .74, 1.18);
-}
 
 @keyframes animate-pop {
   0% {
     opacity: 0;
-    transform: scale(0.5, 0.5);
   }
 
   100% {
     opacity: 1;
-    transform: scale(1, 1);
   }
 }
 
@@ -83,7 +85,7 @@ p {
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
   border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121),  linear-gradient(137.48deg, #ffdb3b 10%,#FE53BB 45%, #8F51EA 67%, #0044ff 87%);
+  background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #ffdb3b 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
