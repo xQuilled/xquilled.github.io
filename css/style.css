@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'Ubuntu Mono';
-  src: url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+  font-family: "Ubuntu Mono";
+  src: url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 }
 
 body {
@@ -9,11 +9,10 @@ body {
   background-position: center;
   background-position: 50% 50%;
   background-repeat: repeat;
-  font-family: 'Ubuntu Mono', monospace;
-  ;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 16px;
   letter-spacing: 2px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-shadow: 0 0 4px white;
   color: #ababab;
 
@@ -39,14 +38,14 @@ body {
   background: rgba(50, 50, 50, 0.1);
   border: 2px solid;
   backdrop-filter: blur(2px);
-  box-shadow: 0px 0px 16px #FFF;
+  box-shadow: 0px 0px 16px #fff;
   border-radius: 16px;
   border-color: #464646;
 
   animation-duration: 0.8s;
-  animation-name: animate-pop;
+  animation-name: animate-opacity;
   backdrop-filter: blur(4px);
-  animation-timing-function: cubic-bezier(.26, .53, .74, 1.18);
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.18);
 }
 
 h1 {
@@ -60,8 +59,7 @@ p {
   margin: 8px;
 }
 
-
-@keyframes animate-pop {
+@keyframes animate-opacity {
   0% {
     opacity: 0;
   }
@@ -71,113 +69,32 @@ p {
   }
 }
 
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 13rem;
-  overflow: hidden;
-  height: 3rem;
-  font-family: 'Ubuntu Mono', monospace;
-  background-size: 300% 300%;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-  transition: 0.5s;
-  animation: gradient_301 5s ease infinite;
-  border: double 4px transparent;
-  background-image: linear-gradient(#212121, #212121), linear-gradient(137.48deg, #ffdb3b 10%, #FE53BB 45%, #8F51EA 67%, #0044ff 87%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}
-
-#container-stars {
-  position: absolute;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  transition: 0.5s;
-  backdrop-filter: blur(1rem);
-  border-radius: 5rem;
-}
-
-strong {
-  z-index: 2;
+button {
+  background-color: #222222;
+  box-shadow: 0 0 10px #ffffff;
+  border-radius: 16px;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #fff;
+  color: #fff;
+  width: 180px;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 16px;
   letter-spacing: 2px;
-  color: #FFFFFF;
-  text-shadow: 0 0 4px white;
+  text-shadow: 0 0 4px #fff;
+  padding: 8px 16px;
+  scale: 1;
+  transition: all 0.4s;
 }
 
-#glow {
-  position: absolute;
-  display: flex;
-  width: 12rem;
+button:hover {
+  scale: 1.1;
+  background: linear-gradient(60deg, rgba(200, 200, 200, 1), rgba(0, 0, 0, 1));
+  box-shadow: 0 0 32px #ffffff;
 }
 
-.circle {
-  width: 100%;
-  height: 30px;
-  filter: blur(2rem);
-  animation: pulse_3011 4s infinite;
-  z-index: -1;
-}
-
-.circle:nth-of-type(1) {
-  background: rgba(254, 83, 186, 0.636);
-}
-
-.circle:nth-of-type(2) {
-  background: rgba(142, 81, 234, 0.704);
-}
-
-.btn:hover #container-stars {
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.btn:hover {
-  transform: scale(1.1)
-}
-
-.btn:active {
-  border: double 4px #FE53BB;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  animation: none;
-}
-
-.btn:active .circle {
-  background: #FE53BB;
-}
-
-@keyframes gradient_301 {
-  0% {
-    background-position: 0% 50%;
-  }
-
-  50% {
-    background-position: 100% 50%;
-  }
-
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes pulse_3011 {
-  0% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-  }
-
-  100% {
-    transform: scale(0.75);
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  }
+button:active {
+  scale: 1.05;
+  background: linear-gradient(50deg, rgba(200, 200, 200, 1), rgba(0, 0, 0, 1));
+  box-shadow: 0 0 32px #555555;
 }
