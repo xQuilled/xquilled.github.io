@@ -1,0 +1,90 @@
+% Document class and font size
+\documentclass[a4paper,9pt]{extarticle}
+
+% Packages
+\usepackage[utf8]{inputenc} % For input encoding
+\usepackage{geometry} % For page margins
+\geometry{a4paper, margin=0.75in} % Set paper size and margins
+\usepackage{titlesec} % For section title formatting
+\usepackage{enumitem} % For itemized list formatting
+\usepackage{hyperref} % For hyperlinks
+
+% Formatting
+\setlist{noitemsep} % Removes item separation
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}[\titlerule] % Section title format
+\titlespacing*{\section}{0pt}{\baselineskip}{\baselineskip} % Section title spacing
+
+% Begin document
+\begin{document}
+
+
+% Disable page numbers
+\pagestyle{empty}
+
+% Header
+\begin{center}
+	\textbf{\Large ALY TARFA}\\[2pt]
+	Ottawa, Ontario | \href{mailto:alytarfa@example.com}{alytarfa@gmail.com} | (647) 972-2444 | \href{https://www.linkedin.com/in/alytarfa}{linkedin.com/in/alytarfa} | \href{https://xquilled.github.io/}{xquilled.github.io}
+\end{center}
+
+% Education Section
+\section*{EDUCATION}
+\noindent
+\textbf{Carleton University}, Ottawa, Ontario \hfill September 2022 | June 2027\\
+Bachelor of Computer Science: Software Engineering Stream, CO-OP \hfill CGPA: 11.10 (A)
+
+% Projects Section
+\section*{PROJECTS}
+\noindent
+\textbf{ASCII Art Web App} \hfill November 2023\\
+\url{https://github.com/xQuilled/ascii-art-app} \hfill node.js, SQLite, express, CSS, HTML
+\begin{itemize}
+	\item Integrated an external API to enable users to generate text-based ASCII art, adding a unique and engaging feature to the website.
+	\item Created a reliable database structure that enhances the overall performance and security of the website, ensuring smooth user interactions and data integrity.
+	\item Implemented user authentication and authorization, allowing users to register and login.
+\end{itemize}
+
+
+\noindent
+\textbf{Within Yourself | 3D Video Game} \hfill December 2021 - January 2022\\
+\url{https://quilled.itch.io/within-yourself} \hfill Godot Engine, Blender, GDScript
+\begin{itemize}
+	\item Successfully designed and developed a 3D horror game, utilizing the Godot
+	      Engine and Blender for character modeling and environment design.
+	\item Conceptualized and crafted a captivating game narrative, character interactions,
+	      and immersive horror atmosphere, resulting in a game that received over 10,000
+	      downloads.
+	\item Implemented game mechanics, including player movement, interactions, and
+	      enemy AI, resulting in seamless and engaging gameplay
+	\item Ensured the game's compatibility with both Windows and Mac platforms,
+	      expanding its reach to a broader audience.
+\end{itemize}
+
+
+\noindent
+\textbf{Go Santa Go! | 2D Web Game} \hfill December 2021\\
+\url{https://quilled.itch.io/go-santa-go} \hfill Godot Engine, Photo Editing
+\begin{itemize}
+	\item Description of the project and your contributions.
+\end{itemize}
+
+% Experience Section
+\section*{EXPERIENCE}
+\noindent
+\textbf{Sleekkut} \hfill June 2021 - August 2022\\
+\textit{Woodworking Assistant} \hfill Richmond Hill, Ontario
+\begin{itemize}
+	\item Ensured precise measurements, accurate cutting, shaping, and assembly of wood materials.
+	\item Utilized woodworking tools, machinery, and techniques to create high-quality, custom-made wood products.
+\end{itemize}
+
+
+\section*{SKILLS}
+\begin{itemize}
+	\item \textbf{Programming:} Java, Javascript, HTML, CSS, Python, C, GDScript, GLSL, Shell Scripting.
+	\item \textbf{Tools:} Linux, Git, RESTful API, OOP, Godot, Blender, Video Editing, Photo Editing, Audio Editing.
+	\item \textbf{Communication:} List of communication skills you possess.
+\end{itemize}
+
+
+\end{document}
