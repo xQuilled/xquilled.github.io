@@ -1,4 +1,4 @@
 indent.log
 resume/*
-!resume/resume.pdf
-!resume/resume.tex
+!resume/*.pdf
+!resume/*.tex
